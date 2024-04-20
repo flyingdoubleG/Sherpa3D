@@ -44,7 +44,10 @@ class StableDiffusion(nn.Module):
         elif self.sd_version == '1.5':
             model_key = "runwayml/stable-diffusion-v1-5"
         pipeline = DiffusionPipeline.from_pretrained(
-            model_key, torch_dtype=torch.float16).to(self.device)
+            model_key, 
+            cache_dir='models', # use in pod server
+            torch_dtype=torch.float16
+        ).to(self.device)
 
         self.vae = pipeline.vae
         self.tokenizer = pipeline.tokenizer

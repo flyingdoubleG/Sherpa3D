@@ -1,0 +1,74 @@
+Config / Flags:
+---------
+config configs/army_geo.json
+iter 2000
+batch 8
+spp 1
+layers 1
+out_name army_geo
+train_res [512, 512]
+display_res [512, 512]
+texture_res [1024, 1024]
+save_interval 100
+video_interval 10
+min_roughness 0.08
+custom_mip False
+random_textures True
+train_background black
+ref_mesh None
+base_mesh None
+validate True
+local_rank 0
+seed 0
+add_directional_text True
+mode geometry_modeling
+text a head of Terracotta Army
+sdf_init_shape custom_mesh
+camera_random_jitter 0.4
+fovy_range [25.71, 45]
+elevation_range [-10, 45]
+guidance_weight 50
+sds_weight_strategy 0
+translation_y -0.1
+translation_z 0
+sdf_init_shape_rotate_x -90
+sdf_init_shape_rotate_y 0
+sdf_init_shape_rotate_z 0
+coarse_iter 1000
+early_time_step_range [0.02, 0.5]
+late_time_step_range [0.02, 0.5]
+if_flip_the_normal False
+front_threshold 45
+if_use_bump True
+uv_padding_block 4
+negative_text 
+semantic_guidance True
+structure_guidance True
+surround_view_num 2
+lambda_semantic 20
+lambda_structure 20
+shape_guide True
+use_fine_tuned_shepE_model True
+mtl_override None
+dmtet_grid 128
+mesh_scale 2.5
+env_scale 1.0
+envmap None
+relight None
+display [{'bsdf': 'normal'}]
+camera_space_light False
+lock_light False
+lock_pos False
+pre_load True
+kd_min [0.0, 0.0, 0.0, 0.0]
+kd_max [1.0, 1.0, 1.0, 1.0]
+ks_min [0.0, 0.08, 0.0]
+ks_max [1.0, 1.0, 1.0]
+nrm_min [-1.0, -1.0, 0.0]
+nrm_max [1.0, 1.0, 1.0]
+cam_near_far [1, 50]
+learn_light False
+gpu_number 1
+sdf_init_shape_scale [1.0, 1.0, 1.0]
+multi_gpu False
+out_dir outputs/geometry/army_geo
